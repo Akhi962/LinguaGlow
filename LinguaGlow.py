@@ -1,5 +1,5 @@
 import streamlit as st
-from google import genai
+import google.generativeai as genai
 st.set_page_config(page_title="LinguaGlow - Emergency Isolate Archive", page_icon="📜", layout="wide")
 st.markdown("""
     <style>
