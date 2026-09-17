@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinguaGlow - Emergency Isolate Archive</title>
+    
+    <!-- 🎨 EMBEDDED CSS (STYLING DESIGN) -->
+    <style>
+        /* Global Base Settings */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f3f4f6;
+            margin: 0;
+            padding: 0;
+            color: #1f2937;
+        }
+
+        /* Premium Header Styling */
+        header {
+            background-color: #1e3a8a;
+            color: white;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .header-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header-title h1 {
+            margin: 0;
+            font-size: 24px;
+            letter-spacing: 0.5px;
+        }
+        .header-title p {
+            margin: 5px 0 0 0;
+            font-size: 14px;
+            color: #93c5fd;
+        }
+        .alert-badge {
+            background-color: #ef4444;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        /* Layout Grid Container */
+        main {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            font-size: 22px;
+            border-bottom: 3px solid #1e3a8a;
+            padding-bottom: 8px;
+            margin-bottom: 25px;
+            color: #111827;
+        }
+
+        /* 2-Column Core Layout Map */
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        /* Language Data Cards */
+        .card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-2px);
+        }
+        .card-nihali { border-top: 6px solid #dc2626; }
+        .card-burush { border-top: 6px solid #2563eb; }
+
+        .card h2 {
+            margin: 0 0 10px 0;
+            font-size: 20px;
+        }
+        .nihali-text { color: #991b1b; }
+        .burush-text { color: #1e3a8a; }
+
+        .status-tag {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: bold;
+            padding: 4px 8px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+        .status-red { background-color: #fee2e2; color: #991b1b; }
+        .status-blue { background-color: #dbeafe; color: #1e3a8a; }
+
+        .card p {
+            line-height: 1.6;
+            color: #4b5563;
+            margin: 0 0 15px 0;
+        }
+        .highlight-box {
+            background-color: #f9fafb;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #d1d5db;
+            font-size: 14px;
+        }
+
+        /* Flashcard Grid Layout */
+        .flashcard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 20px;
+        }
+        .flashcard {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+        .flashcard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+        .flashcard h3 {
+            margin: 0 0 5px 0;
+            font-size: 18px;
+            color: #111827;
+        }
+        .meaning-text {
+            margin: 0 0 10px 0;
+            font-weight: 600;
+            color: #059669;
+            font-size: 15px;
+        }
+        .context-text {
+            margin: 0;
+            font-size: 13px;
+            color: #6b7280;
+            border-top: 1px solid #f3f4f6;
+            padding-top: 10px;
+        }
+
+        /* Footer Banner */
+        footer {
+            margin-top: 60px;
+            border-top: 1px solid #e5e7eb;
+            padding: 25px;
+            text-align: center;
+            background-color: white;
+            color: #9ca3af;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- --- HEADER HEADER BANNER --- -->
+    <header>
+        <div class="header-container">
+            <div class="header-title">
+                <h1>📜 LinguaGlow</h1>
+                <p>Emergency Preservation Pipeline for Human Language Isolates</p>
+            </div>
+            <div class="alert-badge">🚨 Open Innovation Track</div>
+        </div>
+    </header>
+
+    <!-- --- MAIN APP CONTENT CONTAINER --- -->
+    <main>
+        
+        <!-- ================= SECTION 1: THE CRISIS MAP ================= -->
+        <div class="section-title">🔍 Global Language Isolate Deep-Dive</div>
+        
+        <div class="grid-container">
+            
+            <!-- Nihali Data Block -->
+            <div class="card card-nihali">
+                <h2 class="nihali-text">🗣️ Nihali Language Isolate</h2>
+                <div class="status-tag status-red">💥 CRITICALLY ENDANGERED (~2,500 Native Speakers Remaining)</div>
+                <p>
+                    Spoken primarily in the isolated Satpura forest hills along the borderlands of Madhya Pradesh and Maharashtra, India. 
+                    Nihali is a <strong>pure geographic language isolate</strong>, possessing absolute zero structural or historical links to 
+                    Indo-Aryan, Dravidian, or neighboring Austroasiatic language groups. 
+                </p>
+                <div class="highlight-box">
+                    <strong>Crisis Level: Real-Time Collapse.</strong> As native elders pass away, this completely independent branch of human cognitive development faces full deletion from evolutionary history within decades.
+                </div>
+            </div>
+
+            <!-- Burushaski Data Block -->
+            <div class="card card-burush">
+                <h2 class="burush-text">🏔️ Burushaski Language Isolate</h2>
+                <div class="status-tag status-blue">⚠️ VULNERABLE (~100,000 Valley Speakers Remaining)</div>
+                <p>
+                    Preserved within the high-altitude valleys of Hunza, Nagar, and Yasin in northern Pakistan. 
+                    Like Nihali, Burushaski stands completely isolated against all neighboring global language trees. 
+                    It serves as an ancient living structural fossil representing pre-historic migrations across South Asia.
+                </p>
+                <div class="highlight-box">
+                    <strong>Platform Strategy:</strong> System uses sparse localized dictionaries to synthetically map sentence templates, protecting advanced cultural vocabulary variants from extinction.
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ================= SECTION 2: THE DICTIONARY MATRIX ================= -->
+        <div class="section-title">🗂️ Active Rescue Lexicon Matrix</div>
+        
+        <div class="flashcard-grid">
+            
+            <!-- Word 1 -->
+            <div class="flashcard">
+                <div class="flashcard-header">
+                    <span class="status-tag status-red" style="margin:0;">Nihali</span>
+                    <small style="color: #9ca3af;">/Kahl-toh/</small>
+                </div>
+                <h3>Kalto</h3>
+                <p class="meaning-text">➔ Tomorrow / Yesterday</p>
+                <p class="context-text">Time shifts abstractly depending strictly on relational sentence prefixes.</p>
+            </div>
+
+            <!-- Word 2 -->
+            <div class="flashcard">
+                <div class="flashcard-header">
+                    <span class="status-tag status-red" style="margin:0;">Nihali</span>
+                    <small style="color: #9ca3af;">/Pah-poh/</small>
+                </div>
+                <h3>Papo</h3>
+                <p class="meaning-text">➔ Water</p>
+                <p class="context-text">A unique isolated vocabulary root completely distinct from traditional regional roots.</p>
+            </div>
+
+            <!-- Word 3 -->
+            <div class="flashcard">
+                <div class="flashcard-header">
+                    <span class="status-tag status-blue" style="margin:0;">Burushaski</span>
+                    <small style="color: #9ca3af;">/Ahs-khoor/</small>
+                </div>
+                <h3>Askhur</h3>
+                <p class="meaning-text">➔ Flower</p>
+                <p class="context-text">An isolated geographic marker preserved natively within mountain valley folk-stories.</p>
+            </div>
+
+            <!-- Word 4 -->
+            <div class="flashcard">
+                <div class="flashcard-header">
+                    <span class="status-tag status-blue" style="margin:0;">Burushaski</span>
+                    <small style="color: #9ca3af;">/Bahlth/</small>
+                </div>
+                <h3>Balth</h3>
+                <p class="meaning-text">➔ Apple</p>
+                <p class="context-text">Reflects centuries of local agrarian terminology unique to the high Hunza valleys.</p>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- --- FOOTER CAPTION --- -->
+    <footer>
+        LinguaGlow System Engine • Built on a Lightweight Notepad Architecture for Solo Hackathon Deployment
+    </footer>
+
+</body>
+</html>
