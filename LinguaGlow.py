@@ -60,7 +60,18 @@ def query_gemini_backend(prompt_text):
 with tab1:
     st.write(f"Generate a custom cultural narrative contextually translated into English from {selected_lang}.")
     story_theme = st.text_input("Enter a narrative theme (e.g., 'Forest wildlife', 'A rainy evening', 'Harvest celebration'):", "A story about mountain rivers")
-    client = genai.Client(api_key=api_key)
+    def query_gemini_backend(prompt_text):
+        if not api_key:
+            st.error("Please paste your API key into the sidebar to unlock the generative backend execution")
+            return None
+        try:
+            genai.configure(api_key = api_key)
+            model = genai.GenerativeModel('gemini-1.5-flash')
+            response = model.generate_content(prompt_text)
+            return response.text
+        except Exception as e:
+            st.error(f"Backend Processing failure: {e}")
+            return None
     if st.button("🚀 Execute AI Story Pipeline"):
         with st.spinner(f"Compiling {selected_lang} language matrix variables..."):
             prompt = f"""
