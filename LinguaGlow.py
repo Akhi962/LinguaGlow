@@ -72,7 +72,7 @@ with tab1:
         except Exception as e:
             st.error(f"Backend Processing failure: {e}")
             return None
-    if st.button("🚀 Execute AI Story Pipeline"):
+    if st.button(" Execute AI Story Pipeline"):
         with st.spinner(f"Compiling {selected_lang} language matrix variables..."):
             prompt = f"""
             You are a master historical computational linguist specializing in language isolates. 
@@ -82,7 +82,7 @@ with tab1:
             ### 📖 Immersive Reading Map
             Show sentences written in the native {selected_lang} format (use phonetics if character sets are scarce) followed immediately by the accurate English translation.
             
-            ### 💡 Cultural Significance Context
+            ###  Cultural Significance Context
             Provide a 2-sentence structural explanation of unique linguistic markers noticed in this specific text structure.
             """
             result = query_gemini_backend(prompt)
