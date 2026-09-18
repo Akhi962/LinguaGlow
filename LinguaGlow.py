@@ -60,7 +60,7 @@ def query_gemini_backend(prompt_text):
 with tab1:
     st.write(f"Generate a custom cultural narrative contextually translated into English from {selected_lang}.")
     story_theme = st.text_input("Enter a narrative theme (e.g., 'Forest wildlife', 'A rainy evening', 'Harvest celebration'):", "A story about mountain rivers")
-    
+    client = genai.Client(api_key=api_key)
     if st.button("🚀 Execute AI Story Pipeline"):
         with st.spinner(f"Compiling {selected_lang} language matrix variables..."):
             prompt = f"""
