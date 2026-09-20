@@ -72,7 +72,7 @@ css_styles = """
     <div class="snowflake">❅</div>
     <div class="snowflake">❆</div>
 </div>
-)
+"""
 st.markdown(css_styles, unsafe_allow_html=True)
 
 # Authentication Sidebar Setup
