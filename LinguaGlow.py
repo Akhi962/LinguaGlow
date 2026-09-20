@@ -29,33 +29,40 @@ api_key = st.sidebar.text_input("Enter Gemini API Key:", type="password", placeh
 st.sidebar.markdown("---")
 st.sidebar.info("This Python engine uses synthetic generation to build interactive linguistic frameworks for data-scarce languages like Nihali.")
 st.subheader(" The Language Isolate Crisis Track")
+# ==========================================
+# LANGUAGE CARDS LAYOUT
+# ==========================================
+st.title("The Language Isolate Crisis Track")
+
 col1, col2 = st.columns(2)
 
 with col1:
-    st.markdown("""
-        <div class="isolate-card">
-            "<h3 style='margin-top:0; color:#1e293b;'>🌐 Nihali Language Isolate</h3>"
-            <div class="status-badge badge-endangered">⚠️ Critically Endangered (~2,500 Speakers Left)</div>
-            <div class="card-body">
-                Spoken predominantly along the borderlands of the Satpura Hills in India. 
-                Nihali remains an essential unclassified linguistic trace, completely distinct 
-                from adjacent Dravidian and Indo-Aryan structures.
-            </div>
-        </div>
-    """, unsafe_allow_html=True)
+    nihali_html = (
+        "<div class='isolate-card'>"
+        "<h3 style='margin-top:0; color:#1e293b;'>🌐 Nihali Language Isolate</h3>"
+        "<div class='status-badge badge-endangered'>⚠️ Critically Endangered (~2,500 Speakers Left)</div>"
+        "<div class='card-body'>"
+        "Spoken predominantly along the borderlands of the Satpura Hills in India. "
+        "Nihali remains an essential unclassified linguistic trace, completely distinct "
+        "from adjacent Dravidian and Indo-Aryan structures."
+        "</div>"
+        "</div>"
+    )
+    st.markdown(nihali_html, unsafe_allow_html=True)
 
 with col2:
-    st.markdown("""
-        <div class="isolate-card">
-            <h3 style="margin-top:0; color:#1e293b;">⛰️ Burushaski Language Isolate</h3>
-            <div class="status-badge badge-vulnerable">⚠️ Vulnerable (~100,000 Speakers Left)</div>
-            <div class="card-body">
-                A distinct community of native Burushaski speakers resides in Srinagar, Jammu and Kashmir. 
-                They are descendants of families who migrated from the Hunza and Nagar valleys. Today, 
-                they maintain their unique language isolate while being completely integrated into Kashmiri culture.
-            </div>
-        </div>
-    """, unsafe_allow_html=True)
+    burushaski_html = (
+        "<div class='isolate-card'>"
+        "<h3 style='margin-top:0; color:#1e293b;'>⛰️ Burushaski Language Isolate</h3>"
+        "<div class='status-badge badge-vulnerable'>⚠️ Vulnerable (~100,000 Speakers Left)</div>"
+        "<div class='card-body'>"
+        "A distinct community of native Burushaski speakers resides in Srinagar, Jammu and Kashmir. "
+        "They are descendants of families who migrated from the Hunza and Nagar valleys. Today, "
+        "they maintain their unique language isolate while being completely integrated into Kashmiri culture."
+        "</div>"
+        "</div>"
+    )
+    st.markdown(burushaski_html, unsafe_allow_html=True)
 st.markdown("---")
 st.subheader("⚡ Live Generative Engine Pipeline")
 selected_lang = st.selectbox("Select Target Language Isolate:", ["Nihali", "Burushaski"])
