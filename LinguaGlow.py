@@ -1,11 +1,7 @@
 import streamlit as st
 import google.generativeai as genai
-st.set_page_config(page_title="LinguaGlow - Emergency Isolate Archive", page_icon="📜", layout="wide")
-st.markdown("""
-    <style>
-    st.markdown("""
-    <style>
-           # Custom UI Styles
+
+# Custom UI Styles
 css_styles = (
     "<style>"
     ".isolate-card { background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 24px; margin-bottom: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }"
@@ -15,25 +11,27 @@ css_styles = (
     ".card-body { font-size: 0.95rem; line-height: 1.6; color: #475569; }"
     "</style>"
 )
-st.markdown(css_styles, unsafe_allow_html=True) 
-    </style>
-""", unsafe_allow_html=True)
-st.markdown("""
-    <div class='main-header'>
-        st.markdown("<h1 style='margin:0;'>📜 LinguaGlow</h1>", unsafe_allow_html=True)
-        <p style='margin:5px 0 0 0; color:#93c5fd;'>Emergency AI Backend & Preservation Pipeline for Human Language Isolates</p>
-    </div>
-""", unsafe_allow_html=True)
-st.sidebar.header("🔑 Authentication Setup")
-api_key = st.sidebar.text_input("Enter Gemini API Key:", type="password", placeholder="AI Studio Key...")
-st.sidebar.markdown("---")
-st.sidebar.info("This Python engine uses synthetic generation to build interactive linguistic frameworks for data-scarce languages like Nihali.")
-st.subheader(" The Language Isolate Crisis Track")
-# ==========================================
-# LANGUAGE CARDS LAYOUT
-# ==========================================
-st.title("The Language Isolate Crisis Track")
+st.markdown(css_styles, unsafe_allow_html=True)
 
+# Authentication Sidebar Setup
+with st.sidebar:
+    st.title("🔑 Authentication Setup")
+    api_key = st.text_input("Enter Gemini API Key:", type="password")
+    
+    st.markdown("<hr>", unsafe_allow_html=True)
+    st.markdown(
+        "<div style='font-size:0.85rem; color:#64748b; line-height:1.5;'>"
+        "This Python engine uses synchronous generation to build interactive linguistic frameworks "
+        "for data-scarce languages like Nihali and Burushaski."
+        "</div>", 
+        unsafe_allow_html=True
+    )
+
+# Main Title Engine
+st.markdown("<h1 style='margin:0;'>📜 LinguaGlow</h1>", unsafe_allow_html=True)
+st.subheader("The Language Isolate Crisis Track")
+
+# Premium Language Isolate Cards View
 col1, col2 = st.columns(2)
 
 with col1:
@@ -63,60 +61,44 @@ with col2:
         "</div>"
     )
     st.markdown(burushaski_html, unsafe_allow_html=True)
-st.markdown("---")
-st.subheader("⚡ Live Generative Engine Pipeline")
-selected_lang = st.selectbox("Select Target Language Isolate:", ["Nihali", "Burushaski"])
-tab1, tab2 = st.tabs(["📖 AI Story Generator", "🗂️ Synthetic Flashcard Matrix"])
+
+# Language Selector Setup
+selected_lang = st.selectbox("Select Language Isolate Workspace Target:", ["Nihali", "Burushaski"])
+
+# Interactive Pipelines Tabs Engine
+tab1, tab2 = st.tabs(["📚 Cultural Story Generator", "🗂️ Language Vocabulary Dictionary"])
+
+# AI Backend Engine Utility
 def query_gemini_backend(prompt_text):
     if not api_key:
-        st.error(" Please paste your Gemini API Key into the sidebar to unlock the generative backend execution.")
+        st.error("Please paste your API key into the sidebar to unlock runtime execution.")
         return None
     try:
-        client = genai.Client(api_key=api_key)
-        response = client.models.generate_content(
-            model='gemini-2.5-flash',
-            contents=[prompt_text]
-        )
+        genai.configure(api_key=api_key)
+        model = genai.GenerativeModel('gemini-2.5-flash')
+        response = model.generate_content(prompt_text)
         return response.text
     except Exception as e:
         st.error(f"Backend Processing Failure: {e}")
         return None
-with tab1:
-    st.write(f"Generate a custom cultural narrative contextually translated into English from {selected_lang}.")
-    story_theme = st.text_input("Enter a narrative theme (e.g., 'Forest wildlife', 'A rainy evening', 'Harvest celebration'):", "A story about mountain rivers")
-    def query_gemini_backend(prompt_text):
-        if not api_key:
-            st.error("Please paste your API key into the sidebar to unlock the generative backend execution")
-            return None
-        try:
-            genai.configure(api_key = api_key)
-            model = genai.GenerativeModel('gemini-3.6-flash')
-            response = model.generate_content(prompt_text)
-            return response.text
-        except Exception as e:
-            st.error(f"Backend Processing failure: {e}")
-            return None
-    if st.button(" Execute AI Story Pipeline"):
-        with st.spinner(f"Compiling {selected_lang} language matrix variables..."):
-            prompt = f"""
-            You are a master historical computational linguist specializing in language isolates. 
-            Write an short, simple 2-paragraph cultural story or dialogue relating to '{story_theme}'.
-            
-            Structure the response using Markdown sections:
-            ### 📖 Immersive Reading Map
-            Show sentences written in the native {selected_lang} format (use phonetics if character sets are scarce) followed immediately by the accurate English translation.
-            
-            ###  Cultural Significance Context
-            Provide a 2-sentence structural explanation of unique linguistic markers noticed in this specific text structure.
-            """
-            result = query_gemini_backend(prompt)
-            if result:
-                st.success("Data Synthesized Successfully!")
-                st.markdown(result)
 
-# ================= TAB 2: FLASHCARD BACKEND =================
-# ============= TAB 2: FLASHCARD BACKEND =============
-    with tab2:
+# TAB 1 Execution Block
+with tab1:
+    if st.button("🚀 Execute AI Story Pipeline"):
+        with st.spinner(f"Compiling {selected_lang} language matrix data..."):
+            prompt = (
+                f"You are a master historical computational linguist specialist.\n"
+                f"Write a short, simple 2-paragraph cultural story or dialect narrative featuring {selected_lang}.\n"
+                f"Ensure it highlights its unique syntactic features."
+            )
+            story_result = query_gemini_backend(prompt)
+            if story_result:
+                st.subheader("📚 Cultural Narrative Integration")
+                st.markdown(story_result)
+
+# TAB 2 Execution Block
+with tab2:
+    if st.button("🗂️ Extract Live Lexicon Assets"):
         with st.spinner("Parsing dictionary datasets via backend logic..."):
             prompt = (
                 f"Generate a list of 3 important vocabulary words or conversational phrases natively used in the language.\n"
@@ -127,9 +109,17 @@ with tab1:
                 f"4. An analytical note explaining why this root word is considered isolated with no known relatives.\n\n"
                 f"Format as clean, bulleted markdown points."
             )
-            
             result = query_gemini_backend(prompt)
             if result:
                 st.success("Vocabulary Dictionary Compiled!")
                 st.markdown(result)
-st.markdown("<br><hr><center style='color:#9ca3af; font-size:14px;'>LinguaGlow Architecture • Automated Python Backend Integration Mode</center>", unsafe_allow_html=True)
+
+# Universal Footer element
+st.markdown("<br><hr><center style='color:#9ca3af; font-size:14px;'>LinguaGlow Architecture • Automated Python Backend Interface</center>", unsafe_allow_html=True)
+
+
+
+
+
+
+               
