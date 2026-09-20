@@ -3,12 +3,50 @@ import google.generativeai as genai
 st.set_page_config(page_title="LinguaGlow - Emergency Isolate Archive", page_icon="📜", layout="wide")
 st.markdown("""
     <style>
-    .main-header { background-color: #1e3a8a; color: white; padding: 20px; border-radius: 8px; margin-bottom: 30px; }
-    .status-tag { display: inline-block; font-size: 12px; font-weight: bold; padding: 4px 8px; border-radius: 4px; margin-bottom: 10px; }
-    .status-red { background-color: #fee2e2; color: #991b1b; }
-    .status-blue { background-color: #dbeafe; color: #1e3a8a; }
-    .card { background-color: white; padding: 20px; border-radius: 8px; border-top: 6px solid #dc2626; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 20px; }
-    .card-blue { border-top: 6px solid #2563eb; }
+    st.markdown("""
+    <style>
+    /* Card Container Base */
+    .isolate-card {
+        background-color: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 12px;
+        padding: 24px;
+        margin-bottom: 16px;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    }
+    
+    /* Premium Badge Layouts */
+    .status-badge {
+        display: inline-flex;
+        align-items: center;
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        padding: 6px 12px;
+        border-radius: 9999px;
+        margin-bottom: 16px;
+    }
+    
+    .badge-vulnerable {
+        background-color: #fef3c7;
+        color: #d97706;
+    }
+    
+    .badge-endangered {
+        background-color: #fee2e2;
+        color: #dc2626;
+    }
+    
+    /* Card Body Typography */
+    .card-body {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        color: #475569;
+    }
+    </style>
+""", unsafe_allow_html=True)
+    }
     </style>
 """, unsafe_allow_html=True)
 st.markdown("""
@@ -23,20 +61,30 @@ st.sidebar.markdown("---")
 st.sidebar.info("This Python engine uses synthetic generation to build interactive linguistic frameworks for data-scarce languages like Nihali.")
 st.subheader(" The Language Isolate Crisis Track")
 col1, col2 = st.columns(2)
+
 with col1:
     st.markdown("""
-        <div class='card'>
-            <h3 style='color:#991b1b; margin:0 0 10px 0;'> Nihali Language Isolate</h3>
-            <div class='status-tag status-red'>💥 CRITICALLY ENDANGERED (~2,500 Speakers Left)</div>
-            <p style='color:#4b5563; line-height:1.6;'>Spoken along the Satpura hills borderlands of India. Nihali holds absolute zero genetic or structural relationship with Indo-Aryan or Dravidian family trees. When native elders pass away, this whole branch of human speech faces extinction.</p>
+        <div class="isolate-card">
+            <h3 style="margin-top:0; color:#1e293b;">🌐 Nihali Language Isolate</h3>
+            <div class="status-badge badge-endangered">⚠️ Critically Endangered (~2,500 Speakers Left)</div>
+            <div class="card-body">
+                Spoken predominantly along the borderlands of the Satpura Hills in India. 
+                Nihali remains an essential unclassified linguistic trace, completely distinct 
+                from adjacent Dravidian and Indo-Aryan structures.
+            </div>
         </div>
     """, unsafe_allow_html=True)
+
 with col2:
     st.markdown("""
-        <div class='card card-blue'>
-            <h3 style='color:#1e3a8a; margin:0 0 10px 0;'>🏔️ Burushaski Language Isolate</h3>
-            <div class='status-tag status-blue'>⚠️ VULNERABLE (100,000 Speakers Left)</div>
-            <p style='color:#4b5563; line-height:1.6;'>A distinct community of native Burushaski speakers resides in Srinagar, Jammu and Kashmir. They are descendants of families who migrated from the Hunza and Nagar valleys in the late 19th and early 20th centuries. Today, they maintain their unique language isolate while being completely integrated into Kashmiri culture. Linguists have proposed theories that it may be related to the BMAC (Bactria–Margiana Archaeological Complex) civilization from 3,700 years ago from Central Asia.</p>
+        <div class="isolate-card">
+            <h3 style="margin-top:0; color:#1e293b;">⛰️ Burushaski Language Isolate</h3>
+            <div class="status-badge badge-vulnerable">⚠️ Vulnerable (~100,000 Speakers Left)</div>
+            <div class="card-body">
+                A distinct community of native Burushaski speakers resides in Srinagar, Jammu and Kashmir. 
+                They are descendants of families who migrated from the Hunza and Nagar valleys. Today, 
+                they maintain their unique language isolate while being completely integrated into Kashmiri culture.
+            </div>
         </div>
     """, unsafe_allow_html=True)
 st.markdown("---")
