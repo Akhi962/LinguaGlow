@@ -20,7 +20,7 @@ st.markdown(css_styles, unsafe_allow_html=True)
 """, unsafe_allow_html=True)
 st.markdown("""
     <div class='main-header'>
-        <h1 style='margin:0;'>📜 LinguaGlow</h1>
+        st.markdown("<h1 style='margin:0;'>📜 LinguaGlow</h1>", unsafe_allow_html=True)
         <p style='margin:5px 0 0 0; color:#93c5fd;'>Emergency AI Backend & Preservation Pipeline for Human Language Isolates</p>
     </div>
 """, unsafe_allow_html=True)
