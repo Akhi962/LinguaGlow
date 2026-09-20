@@ -36,7 +36,7 @@ with col2:
         <div class='card card-blue'>
             <h3 style='color:#1e3a8a; margin:0 0 10px 0;'>🏔️ Burushaski Language Isolate</h3>
             <div class='status-tag status-blue'>⚠️ VULNERABLE (~100,000 Speakers Left)</div>
-            <p style='color:#4b5563; line-height:1.6;'>A distinct community of native Burusgaski speakers resides in Srinagar,Jammu and Kashmir.They are descendants of families who migrated from the Hunza and Nagar valleys in the late 19th and early 20th centuries.Today,they maintain their unique language isolate while being completely integrated to Kashmir Culture.Linguists gave thoeries that it maybe related to the BMAC Civilisation 3700 years ago. .</p>
+            <p style='color:#4b5563; line-height:1.6;'>A distinct community of native Burushaski speakers resides in Srinagar, Jammu and Kashmir. They are descendants of families who migrated from the Hunza and Nagar valleys in the late 19th and early 20th centuries. Today, they maintain their unique language isolate while being completely integrated into Kashmiri culture. Linguists have proposed theories that it may be related to the BMAC (Bactria–Margiana Archaeological Complex) civilization from 3,700 years ago from Central Asia.</p>
         </div>
     """, unsafe_allow_html=True)
 st.markdown("---")
