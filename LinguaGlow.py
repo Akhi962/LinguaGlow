@@ -121,7 +121,7 @@ with tab2:
     if st.button("🗂️ Extract Live Lexicon Assets"):
         with st.spinner("Parsing dictionary datasets via backend logic..."):
             prompt = f"""
-            Generate a list of 3 important vocabulary words or conversational phrases natively unique to the {selected_lang} language isolate.
+            Generate a list of 3 important vocabulary words or conversational phrases natively used in the language.
             For each entry, you must include:
             1. The target word/phrase in {selected_lang}
             2. Clear phonetic breakdown for pronunciation
