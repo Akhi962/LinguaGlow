@@ -116,24 +116,25 @@ with tab1:
 
 # ================= TAB 2: FLASHCARD BACKEND =================
 with tab2:
-    st.write(f"Extract dynamic vocabulary assets directly from the rare {selected_lang} lexicon map.")
+    st.write(f"Exwith st.spinner("Parsing dictionary datasets via backend logic..."):
+        prompt = f"""
+Generate a list of 3 important vocabulary words or conversational phrases natively used in the language.
+For each entry, you must include:
+1. The target word/phrase in {selected_lang}
+2. Clear phonetic breakdown for pronunciation
+3. Its exact English meaning
+4. An analytical note explaining why this root word is considered isolated with no known relatives.
+
+Format as clean, bulleted markdown points.
+"""
+        
+        result = query_gemini_backend(prompt)
+        if result:
+            st.success("Vocabulary Dictionary Compiled!")
+            st.markdown(result)tract dynamic vocabulary assets directly from the rare {selected_lang} lexicon map.")
     
     if st.button("🗂️ Extract Live Lexicon Assets"):
-        with st.spinner("Parsing dictionary datasets via backend logic..."):
-            prompt = f"""
-            Generate a list of 3 important vocabulary words or conversational phrases natively used in the language.
-            For each entry, you must include:
-            1. The target word/phrase in {selected_lang}
-            2. Clear phonetic breakdown for pronunciation
-            3. Its exact English meaning
-            4. An analytical note explaining why this root word is considered isolated with no links to surrounding languages.
+        
             
-            Format as clean, bulleted markdown points.
-            """
-            result = query_gemini_backend(prompt)
-            if result:
-                st.success("Vocabulary Dictionary Compiled!")
-                st.markdown(result)
-
 
 st.markdown("<br><hr><center style='color:#9ca3af; font-size:14px;'>LinguaGlow Architecture • Automated Python Backend Integration Mode</center>", unsafe_allow_html=True)
