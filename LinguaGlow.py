@@ -20,20 +20,20 @@ st.markdown("""
 st.sidebar.header("🔑 Authentication Setup")
 api_key = st.sidebar.text_input("Enter Gemini API Key:", type="password", placeholder="AI Studio Key...")
 st.sidebar.markdown("---")
-st.sidebar.info("💡 **Hackathon Edge:** This Python engine uses synthetic generation to build interactive linguistic frameworks for data-scarce languages like Nihali.")
+st.sidebar.info("This Python engine uses synthetic generation to build interactive linguistic frameworks for data-scarce languages like Nihali.")
 st.subheader("🔍 The Language Isolate Crisis Track")
 col1, col2 = st.columns(2)
 with col1:
     st.markdown("""
         <div class='card'>
-            <h3 style='color:#991b1b; margin:0 0 10px 0;'>🗣️ Nihali Language Isolate</h3>
+            <h3 style='color:#991b1b; margin:0 0 10px 0;'> Nihali Language Isolate</h3>
             <div class='status-tag status-red'>💥 CRITICALLY ENDANGERED (~2,500 Speakers Left)</div>
             <p style='color:#4b5563; line-height:1.6;'>Spoken along the Satpura hills borderlands of India. Nihali holds absolute zero genetic or structural relationship with Indo-Aryan or Dravidian family trees. When native elders pass away, this whole branch of human speech faces extinction.</p>
         </div>
     """, unsafe_allow_html=True)
 with col2:
     st.markdown("""
-        <div class='card card-blue'>
+        <div class='card card-yellow'>
             <h3 style='color:#1e3a8a; margin:0 0 10px 0;'>🏔️ Burushaski Language Isolate</h3>
             <div class='status-tag status-blue'>⚠️ VULNERABLE (~100,000 Speakers Left)</div>
             <p style='color:#4b5563; line-height:1.6;'>A distinct community of native Burushaski speakers resides in Srinagar, Jammu and Kashmir. They are descendants of families who migrated from the Hunza and Nagar valleys in the late 19th and early 20th centuries. Today, they maintain their unique language isolate while being completely integrated into Kashmiri culture. Linguists have proposed theories that it may be related to the BMAC (Bactria–Margiana Archaeological Complex) civilization from 3,700 years ago from Central Asia.</p>
