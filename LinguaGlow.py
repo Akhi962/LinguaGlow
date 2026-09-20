@@ -21,7 +21,7 @@ st.sidebar.header("🔑 Authentication Setup")
 api_key = st.sidebar.text_input("Enter Gemini API Key:", type="password", placeholder="AI Studio Key...")
 st.sidebar.markdown("---")
 st.sidebar.info("This Python engine uses synthetic generation to build interactive linguistic frameworks for data-scarce languages like Nihali.")
-st.subheader("🔍 The Language Isolate Crisis Track")
+st.subheader(" The Language Isolate Crisis Track")
 col1, col2 = st.columns(2)
 with col1:
     st.markdown("""
@@ -33,9 +33,9 @@ with col1:
     """, unsafe_allow_html=True)
 with col2:
     st.markdown("""
-        <div class='card card-purple'>
+        <div class='card card-blue'>
             <h3 style='color:#1e3a8a; margin:0 0 10px 0;'>🏔️ Burushaski Language Isolate</h3>
-            <div class='status-tag status-purple'>⚠️ VULNERABLE (100,000 Speakers Left)</div>
+            <div class='status-tag status-blue'>⚠️ VULNERABLE (100,000 Speakers Left)</div>
             <p style='color:#4b5563; line-height:1.6;'>A distinct community of native Burushaski speakers resides in Srinagar, Jammu and Kashmir. They are descendants of families who migrated from the Hunza and Nagar valleys in the late 19th and early 20th centuries. Today, they maintain their unique language isolate while being completely integrated into Kashmiri culture. Linguists have proposed theories that it may be related to the BMAC (Bactria–Margiana Archaeological Complex) civilization from 3,700 years ago from Central Asia.</p>
         </div>
     """, unsafe_allow_html=True)
@@ -45,7 +45,7 @@ selected_lang = st.selectbox("Select Target Language Isolate:", ["Nihali", "Buru
 tab1, tab2 = st.tabs(["📖 AI Story Generator", "🗂️ Synthetic Flashcard Matrix"])
 def query_gemini_backend(prompt_text):
     if not api_key:
-        st.error("🚨 Please paste your Gemini API Key into the sidebar to unlock the generative backend execution.")
+        st.error(" Please paste your Gemini API Key into the sidebar to unlock the generative backend execution.")
         return None
     try:
         client = genai.Client(api_key=api_key)
