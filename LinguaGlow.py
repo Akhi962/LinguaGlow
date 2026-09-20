@@ -5,48 +5,17 @@ st.markdown("""
     <style>
     st.markdown("""
     <style>
-    /* Card Container Base */
-    .isolate-card {
-        background-color: #ffffff;
-        border: 1px solid #e2e8f0;
-        border-radius: 12px;
-        padding: 24px;
-        margin-bottom: 16px;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-    }
-    
-    /* Premium Badge Layouts */
-    .status-badge {
-        display: inline-flex;
-        align-items: center;
-        font-size: 0.75rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-        padding: 6px 12px;
-        border-radius: 9999px;
-        margin-bottom: 16px;
-    }
-    
-    .badge-vulnerable {
-        background-color: #fef3c7;
-        color: #d97706;
-    }
-    
-    .badge-endangered {
-        background-color: #fee2e2;
-        color: #dc2626;
-    }
-    
-    /* Card Body Typography */
-    .card-body {
-        font-size: 0.95rem;
-        line-height: 1.6;
-        color: #475569;
-    }
-    </style>
-""", unsafe_allow_html=True)
-    }
+           # Custom UI Styles
+css_styles = (
+    "<style>"
+    ".isolate-card { background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 24px; margin-bottom: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }"
+    ".status-badge { display: inline-flex; align-items: center; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; padding: 6px 12px; border-radius: 9999px; margin-bottom: 16px; }"
+    ".badge-vulnerable { background-color: #fef3c7; color: #d97706; }"
+    ".badge-endangered { background-color: #fee2e2; color: #dc2626; }"
+    ".card-body { font-size: 0.95rem; line-height: 1.6; color: #475569; }"
+    "</style>"
+)
+st.markdown(css_styles, unsafe_allow_html=True) 
     </style>
 """, unsafe_allow_html=True)
 st.markdown("""
