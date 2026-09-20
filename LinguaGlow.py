@@ -34,7 +34,7 @@ col1, col2 = st.columns(2)
 with col1:
     st.markdown("""
         <div class="isolate-card">
-            <h3 style="margin-top:0; color:#1e293b;">🌐 Nihali Language Isolate</h3>
+            "<h3 style='margin-top:0; color:#1e293b;'>🌐 Nihali Language Isolate</h3>"
             <div class="status-badge badge-endangered">⚠️ Critically Endangered (~2,500 Speakers Left)</div>
             <div class="card-body">
                 Spoken predominantly along the borderlands of the Satpura Hills in India. 
