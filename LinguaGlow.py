@@ -35,7 +35,7 @@ with col2:
     st.markdown("""
         <div class='card card-yellow'>
             <h3 style='color:#1e3a8a; margin:0 0 10px 0;'>🏔️ Burushaski Language Isolate</h3>
-            <div class='status-tag status-yellow'>⚠️ VULNERABLE (~100,000 Speakers Left)</div>
+            <div class='status-tag status-purple'>⚠️ VULNERABLE (100,000 Speakers Left)</div>
             <p style='color:#4b5563; line-height:1.6;'>A distinct community of native Burushaski speakers resides in Srinagar, Jammu and Kashmir. They are descendants of families who migrated from the Hunza and Nagar valleys in the late 19th and early 20th centuries. Today, they maintain their unique language isolate while being completely integrated into Kashmiri culture. Linguists have proposed theories that it may be related to the BMAC (Bactria–Margiana Archaeological Complex) civilization from 3,700 years ago from Central Asia.</p>
         </div>
     """, unsafe_allow_html=True)
