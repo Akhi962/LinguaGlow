@@ -75,7 +75,7 @@ def query_gemini_backend(prompt_text):
         return None
     try:
         genai.configure(api_key=api_key)
-        model = genai.GenerativeModel('gemini-2.6-flash')
+        model = genai.GenerativeModel('gemini-3.5-flash')
         response = model.generate_content(prompt_text)
         return response.text
     except Exception as e:
